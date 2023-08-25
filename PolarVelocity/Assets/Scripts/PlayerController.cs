@@ -23,8 +23,10 @@ public class PlayerController : MonoBehaviour
         verticalInput = 2*(Input.GetAxis("Vertical"));
 
         // move the object
-        player_rb.MovePosition(Vector3.forward * Time.deltaTime * verticalInput);
-        player_rb.MovePosition(Vector3.right * Time.deltaTime * horizontalInput);
+        //player_rb.MovePosition(Vector3.forward * Time.deltaTime * verticalInput);
+        //player_rb.MovePosition(Vector3.right * Time.deltaTime * horizontalInput);
+        transform.position = transform.position + (Vector3.right * Time.deltaTime * horizontalInput);
+        transform.position = transform.position + (Vector3.forward * Time.deltaTime * verticalInput); 
         transform.Rotate(Vector3.up * horizontalInput * turnSpeed * Time.deltaTime);
 
     }
