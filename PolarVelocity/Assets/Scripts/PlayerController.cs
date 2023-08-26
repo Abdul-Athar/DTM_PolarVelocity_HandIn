@@ -4,30 +4,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float horizontalInput;
-    public float verticalInput;
-    public float turnSpeed = 30;
-    Rigidbody player_rb;
+    public float moveSpeed;
+    CharacterController ch;
 
     // Start is called before the first frame update
     void Start()
     {
-        player_rb = GetComponent<Rigidbody>();
+        ch = GetComponent<CharacterController>();
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        //get movement values from keyboard
-        horizontalInput = 2*(Input.GetAxis("Horizontal"));
-        verticalInput = 2*(Input.GetAxis("Vertical"));
-
-        // move the object
-        //player_rb.MovePosition(Vector3.forward * Time.deltaTime * verticalInput);
-        //player_rb.MovePosition(Vector3.right * Time.deltaTime * horizontalInput);
-        transform.position = transform.position + (Vector3.right * Time.deltaTime * horizontalInput);
-        transform.position = transform.position + (Vector3.forward * Time.deltaTime * verticalInput); 
-        transform.Rotate(Vector3.up * horizontalInput * turnSpeed * Time.deltaTime);
-
+        float x = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
+        float z = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+        ch.Move(new Vector3(x, 0, z));
     }
 }

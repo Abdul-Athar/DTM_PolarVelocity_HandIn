@@ -4108,7 +4108,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484569241}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.9800072, y: 1.0654036, z: 0.2400002}
@@ -5219,7 +5219,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3782172311619172156, guid: 026fdf048d55d1746bf2a3f72b34c93a, type: 3}
       propertyPath: m_Name
-      value: PenguinModel
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782172311619172156, guid: 026fdf048d55d1746bf2a3f72b34c93a, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4555154632981130630, guid: 026fdf048d55d1746bf2a3f72b34c93a, type: 3}
       propertyPath: m_RootOrder
@@ -6612,6 +6616,10 @@ PrefabInstance:
     - target: {fileID: 1573775801, guid: e2e84f6ede8dc844284fe6fcfffa8e68, type: 3}
       propertyPath: m_Name
       value: Speed boast coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573775801, guid: e2e84f6ede8dc844284fe6fcfffa8e68, type: 3}
+      propertyPath: m_TagString
+      value: SpeedBoost
       objectReference: {fileID: 0}
     - target: {fileID: 1573775803, guid: e2e84f6ede8dc844284fe6fcfffa8e68, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8303,7 +8311,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3952419378060170610, guid: 2fa5038357e0ef04d9d96a0a86bc26b5, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3952419378060170610, guid: 2fa5038357e0ef04d9d96a0a86bc26b5, type: 3}
       propertyPath: m_LocalScale.x
@@ -9796,7 +9804,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205706430}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.9800072, y: 1.0654036, z: 0.2400002}
@@ -11163,9 +11171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 778f6ce673bbdeb4b92bdd8a11d843f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalInput: 0
-  verticalInput: 0
-  turnSpeed: 30
+  moveSpeed: 2
 --- !u!54 &1431149584
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11195,6 +11201,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8606905, y: 4.9672446, z: 1.9144839}
   m_Center: {x: 0.43034592, y: -0.114310846, z: -0.026896985}
+--- !u!143 &1431149587
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431149580}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1437386045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5722812568771117760, guid: be5366f4dddf8ca4ebe9c7f86e0904ad, type: 3}
@@ -13968,6 +13992,10 @@ PrefabInstance:
     - target: {fileID: 1573775801, guid: e2e84f6ede8dc844284fe6fcfffa8e68, type: 3}
       propertyPath: m_Name
       value: Speed boast coin (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573775801, guid: e2e84f6ede8dc844284fe6fcfffa8e68, type: 3}
+      propertyPath: m_TagString
+      value: SpeedBoost
       objectReference: {fileID: 0}
     - target: {fileID: 1573775803, guid: e2e84f6ede8dc844284fe6fcfffa8e68, type: 3}
       propertyPath: m_Materials.Array.data[0]
