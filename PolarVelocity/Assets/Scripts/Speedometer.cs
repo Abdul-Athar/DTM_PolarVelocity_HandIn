@@ -11,13 +11,24 @@ public class Speedometer : MonoBehaviour
     public float maxSpeedPointerAngle;
     public RectTransform pointerHolder;
     public TMPro.TMP_Text speedLabel;
+    public float speed;
+    private Vector3 oldPosition;
 
-    void update ()
+    void Update ()
     {
-        float speed = thePenguin.velocity.magnitude * 3.6f;
+        Debug.Log("test");
+        Debug.Log(oldPosition);
+        Debug.Log(transform.position);
+        speed = Vector3.Distance(oldPosition, transform.position) * 100f;
+        oldPosition = transform.position;
 
-        speedLabel.text = (int)speed + "";
-        speedLabel.alignment = TMPro.TextAlignmentOptions.Center;
+        Debug.Log("Speed: " + speed.ToString("F2"));
+
+
+        //speed = thePenguin.velocity.magnitude * 3.6f;
+        //Debug.Log("Speed of penguin is: " + speed);
+        //speedLabel.text = (int)speed + ""; //speed.ToString();
+        //speedLabel.alignment = TMPro.TextAlignmentOptions.Center;
 
         pointerHolder.localEulerAngles = new Vector3(0, 0, Mathf.Lerp(minSpeedPointerAngle, maxSpeedPointerAngle, speed / maxSpeed));
     }
