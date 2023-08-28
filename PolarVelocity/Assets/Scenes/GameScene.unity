@@ -13162,7 +13162,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!65 &1431149585
 BoxCollider:
@@ -13448,7 +13448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1459434802
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13484,12 +13484,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff34b9d466b99348b9148154bbbc595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thePenguin: {fileID: 1431149584}
-  maxSpeed: 160
-  minSpeedPointerAngle: 207
-  maxSpeedPointerAngle: -25
-  pointerHolder: {fileID: 1180252984}
-  speedLabel: {fileID: 649966578}
+  thePenguin: {fileID: 0}
+  maxSpeed: 0
+  minSpeedPointerAngle: 0
+  maxSpeedPointerAngle: 0
+  pointerHolder: {fileID: 0}
+  speedLabel: {fileID: 0}
   speed: 0
 --- !u!114 &1459434804
 MonoBehaviour:
